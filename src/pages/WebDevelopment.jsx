@@ -1,0 +1,13 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, Monitor, Smartphone, Gauge, Search, ShoppingBag } from 'lucide-react'
+import { SectionLabel, BrowserMockup, ProjectArt } from '../components/Visuals'
+export default function WebDevelopment() {
+    return <div className="page inner-page">
+        <section className="web-hero section-grid"><div><SectionLabel>01 / WEB DEVELOPMENT</SectionLabel><h1>Websites that<br /><em>perform,</em><br />not just look good.</h1><p>Distinctive digital homes built around your business goals, your customers and the details that make you different.</p><Link to="/contact" className="button button-lime">Build my website <ArrowUpRight /></Link></div><div className="web-hero-art"><BrowserMockup title="WEBSARTHAK / SELECTED WORK" /><div className="floating-chip"><Gauge /> Built for performance</div></div></section>
+        <section className="capability-strip"><div><Monitor /> Custom websites</div><div><ShoppingBag /> E-commerce</div><div><Smartphone /> Responsive design</div><div><Search /> SEO foundations</div></section>
+        <section className="section-pad"><div className="section-head"><div><SectionLabel>WHAT WE BUILD</SectionLabel><h2>Made for your<br /><em>next chapter.</em></h2></div><p>From focused landing pages to full digital storefronts, we build the right thing for the job.</p></div><div className="build-grid">{[['01', 'Business websites', 'A polished, clear online home for your business.', 'flora'], ['02', 'Landing pages', 'Focused experiences designed to turn interest into action.', 'fashion'], ['03', 'E-commerce', 'A smoother shopping experience from browse to buy.', 'tech']].map(x => <div className="build-card" key={x[0]}><ProjectArt kind={x[3]} /><span>{x[0]} / {x[1]}</span><h3>{x[1]}</h3><p>{x[2]}</p></div>)}</div></section>
+        <section className="web-process section-pad"><SectionLabel>BUILT WITH INTENTION</SectionLabel><h2>Good work is a<br /><em>good process.</em></h2><div className="process-grid">{[['01', 'Discovery', 'Goals, audience and requirements.'], ['02', 'Direction', 'Structure, wireframes and visual design.'], ['03', 'Development', 'Responsive build, integrations and content.'], ['04', 'Launch', 'Testing, handover and launch support.']].map(x => <div className="process-item" key={x[0]}><span>{x[0]}</span><h3>{x[1]}</h3><p>{x[2]}</p></div>)}</div></section>
+        <section className="big-cta"><SectionLabel>YOUR NEXT WEBSITE STARTS HERE</SectionLabel><h2>Let's make the<br /><em>first impression count.</em></h2><Link to="/contact" className="button button-dark">Tell us what you need <ArrowUpRight /></Link></section>
+    </div>
+}
