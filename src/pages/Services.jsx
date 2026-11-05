@@ -1,0 +1,13 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
+import { SectionLabel, Orb, BrowserMockup, PhoneStack } from '../components/Visuals'
+export default function Services(){return <div className="page inner-page">
+ <section className="inner-hero section-grid"><div><SectionLabel>OUR SERVICES / 01—04</SectionLabel><h1>Creative<br/>solutions for<br/><em>modern brands.</em></h1><p>We bring strategy, design and technology together to create digital work with a point of view.</p></div><div className="inner-hero-art"><Orb variant='purple'/></div></section>
+ <section className="service-detail-list section-pad">
+  <article className="service-detail"><div className="detail-number">01 / DIGITAL</div><div><h2>Web<br/><em>development.</em></h2><p>Fast, considered and conversion-minded websites that make your business look as good as it works.</p><ul><li>Business & portfolio websites</li><li>Landing pages & e-commerce</li><li>Responsive UI/UX design</li><li>Performance & SEO foundations</li></ul><Link to="/services/web-development" className="text-link">Explore web development <ArrowUpRight/></Link></div><BrowserMockup/></article>
+  <article className="service-detail reverse"><div className="detail-number">02 / SOCIAL</div><div><h2>Social that<br/><em>moves people.</em></h2><p>Content systems that turn the everyday scroll into a reason to remember your brand.</p><ul><li>Content strategy & calendars</li><li>Reels and short-form editing</li><li>Creative production</li><li>Platform management</li></ul><Link to="/services/social-media" className="text-link">Explore social media <ArrowUpRight/></Link></div><PhoneStack/></article>
+  <article className="service-detail"><div className="detail-number">03 / IDENTITY</div><div><h2>Make it<br/><em>recognisable.</em></h2><p>Visual identities and creative assets with a clear voice, a distinct look and room to grow.</p><ul><li>Brand identity systems</li><li>Graphic design & campaigns</li><li>Social media templates</li><li>Creative direction</li></ul><Link to="/contact" className="text-link">Discuss a design project <ArrowUpRight/></Link></div><div className="identity-art"><span>W</span><i>✳</i><b>MAKE<br/>YOUR<br/>MARK.</b></div></article>
+ </section>
+ <section className="big-cta"><SectionLabel>LET'S BUILD SOMETHING</SectionLabel><h2>Have a challenge<br/><em>worth solving?</em></h2><Link to="/contact" className="button button-dark">Start a conversation <ArrowUpRight/></Link></section>
+ </div>}

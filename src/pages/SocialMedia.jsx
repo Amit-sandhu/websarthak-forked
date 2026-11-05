@@ -1,0 +1,10 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, Clapperboard, CalendarDays, BarChart3, Camera } from 'lucide-react'
+import { SectionLabel, PhoneStack, ProjectArt } from '../components/Visuals'
+export default function SocialMedia(){return <div className="page inner-page">
+ <section className="social-hero section-grid"><div><SectionLabel>02 / SOCIAL MEDIA MARKETING</SectionLabel><h1>Turn scrolls<br/>into <em>customers.</em></h1><p>Strategy, content and consistency that help your brand show up with something worth saying.</p><Link to="/contact" className="button button-lime">Grow my brand <ArrowUpRight/></Link></div><div className="social-art"><PhoneStack/></div></section>
+ <section className="social-services section-pad"><div className="section-head"><div><SectionLabel>THE SOCIAL STACK</SectionLabel><h2>Show up with<br/><em>something to say.</em></h2></div><p>We make social feel less like a chore and more like a meaningful part of your brand.</p></div><div className="social-capabilities">{[[Clapperboard,'Reels & short-form','Video-first content built to stop the scroll.'],[CalendarDays,'Content planning','A clear calendar, consistent voice and considered cadence.'],[Camera,'Creative production','On-brand visuals that make your feed feel like you.'],[BarChart3,'Account management','Thoughtful publishing, community and performance reviews.']].map(([Icon,title,desc])=><div className="social-cap" key={title}><Icon/><h3>{title}</h3><p>{desc}</p></div>)}</div></section>
+ <section className="social-showcase section-pad"><SectionLabel>CONTENT IN MOTION</SectionLabel><h2>Made to be<br/><em>remembered.</em></h2><div className="social-projects"><ProjectArt kind="social"/><ProjectArt kind="fashion"/><ProjectArt kind="flora"/></div></section>
+ <section className="big-cta"><SectionLabel>LET'S GET YOUR BRAND OUT THERE</SectionLabel><h2>Make your next<br/><em>post count.</em></h2><Link to="/contact" className="button button-dark">Plan a campaign <ArrowUpRight/></Link></section>
+ </div>}
